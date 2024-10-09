@@ -9,12 +9,8 @@ int main(){
 			printf("%c",c);
 		}else{
 			c = tolower(c);
-			for(int i=0;s[i]!=0;i++){
-				if(c==s[i]){
-					printf("%c",s[i-2]);
-					break;
-				}
-			}
+			c = *(strchr(s,c)-2);
+			printf("%c",c);
 		}
 	}
 }
